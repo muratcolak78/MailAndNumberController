@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="424.0" prefWidth="353.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.example.mailandnumbercontroller.MailNumberController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label prefHeight="17.0" prefWidth="294.0" text="Lütfen mail adresini yazınız">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <HBox prefHeight="34.0" prefWidth="313.0">
+      <children>
+         <TextField fx:id="emailField" onAction="#onControlClick" onDragDetected="#onControlClick" prefHeight="25.0" prefWidth="309.0" />
+      </children>
+   </HBox>
+   <Label fx:id="warningText" onDragDetected="#onControlClick" onDragDone="#onControlClick" prefHeight="44.0" prefWidth="305.0">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <HBox prefHeight="34.0" prefWidth="313.0">
+      <children>
+          <Button alignment="CENTER" contentDisplay="TOP" onAction="#onControlClick" onDragDetected="#onControlClick" text="Kontrol et">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="Clear" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#onClearClick" onDragDetected="#onClearClick" text="Sıfırla">
+            <HBox.margin>
+               <Insets left="50.0" />
+            </HBox.margin>
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+      </children>
+   </HBox>
+   <Label prefHeight="17.0" prefWidth="307.0" text="Lütfen telefon numarasını giriniz">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <HBox prefHeight="24.0" prefWidth="313.0">
+      <children>
+         <TextField fx:id="numberField" onAction="#onControlNumberClick" onDragDetected="#onControlNumberClick" prefHeight="25.0" prefWidth="306.0" />
+      </children>
+   </HBox>
+   <Label fx:id="warmingLabel" onDragDetected="#onControlNumberClick" onDragDone="#onControlNumberClick" prefHeight="43.0" prefWidth="313.0">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <HBox prefHeight="36.0" prefWidth="313.0">
+      <children>
+         <Button fx:id="NumberKontrolButton" mnemonicParsing="false" onAction="#onControlNumberClick" onDragDetected="#onControlNumberClick" text="Kontrol et">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="NumberClearButton" mnemonicParsing="false" onAction="#onNumberFieldClearClick" onDragDetected="#onControlNumberClick" text="Sıfırla">
+            <HBox.margin>
+               <Insets left="50.0" />
+            </HBox.margin>
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+      </children>
+   </HBox>
+</VBox>
